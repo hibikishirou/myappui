@@ -1,0 +1,7 @@
+<mat-expansion-panel *ngIf="menuItem.child && menuItem.child.length > 0">
+  <mat-expansion-panel-header>
+    <div [ngClass]="{'menuParent': menuItem.type=='parent'}">{{menuItem.label}}</div>
+  </mat-expansion-panel-header>
+  <menuitem *ngFor="let menuitem of menuItem.child" [menuItem]="menuitem"></menuitem>
+</mat-expansion-panel>
+<a [ngClass]="{'menuLink': menuItem.type =='link'}" (click)="goto(menuItem.link)" *ngIf="!menuItem.child || menuItem.child.length == 0">{{menuItem.label}}</a>
