@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuItem } from '../../models/menu';
-import { Input } from '@angular/core/';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 

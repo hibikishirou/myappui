@@ -11,12 +11,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  menus = MENUS;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-    map(result => result.matches)
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  
+  constructor() {}
 
 }

@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './/app.routing.module';
-import { RouterModule } from '@angular/router/src/router_module';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatExpansionModule, MatListModule } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout';
+import { PagesModule } from './pages/pages.module';
+import { RouterModule } from '@angular/router';
+import { routing } from './app-routing';
 
 @NgModule({
   declarations: [
@@ -15,15 +14,10 @@ import { LayoutModule } from '@angular/cdk/layout';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatListModule,
-    AppRoutingModule,
-    SharedModule
+    RouterModule,
+    SharedModule,
+    PagesModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
