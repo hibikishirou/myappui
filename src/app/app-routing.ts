@@ -1,9 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-    { path: '', loadChildren: './pages/page.module.ts#PagesModule' }
+    { path: '', redirectTo: '', pathMatch: 'full' },
+    { path: '', loadChildren: './pages/pages.module#PagesModule' }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: false });
-
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }

@@ -9,8 +9,53 @@ export class MenuItem {
 export const MENUS = [
     {
         link: '',
+        type: 'head',
+        label: 'Main',
+        icon: '',
+        child: []
+    },
+    {
+        link: '',
         type: 'parent',
-        label: 'Home',
+        label: 'Dashboard',
+        icon: '',
+        child: [{
+            link: '',
+            type: 'link',
+            label: 'Home',
+            icon: '',
+            child: []
+        }, {
+            link: '',
+            type: 'link',
+            label: 'Home',
+            icon: '',
+            child: []
+        }, {
+            link: '',
+            type: 'link',
+            label: 'Home',
+            icon: '',
+            child: []
+        }, {
+            link: '',
+            type: 'link',
+            label: 'Home',
+            icon: '',
+            child: []
+        }]
+    },
+    {
+        link: '',
+        type: 'head',
+        label: 'Component',
+        icon: '',
+        child: []
+    },
+    {
+        link: '',
+        type: 'parent',
+        label: 'Dashboard',
         icon: '',
         child: [{
             link: '',

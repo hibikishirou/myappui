@@ -5,13 +5,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatExpansionModule, MatListModule } from '@angular/material';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
-import { routing } from './pages-routing';
+import { PagesRoutingModule } from './pages-routing';
 
 @NgModule({
   imports: [
-    routing,
-    CommonModule,
+    PagesRoutingModule,
     RouterModule,
+    CommonModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,

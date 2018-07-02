@@ -1,7 +1,16 @@
-<mat-expansion-panel *ngIf="menuItem.child && menuItem.child.length > 0">
+<mat-list-item *ngIf="menuItem.type =='head'">
+  <div [ngClass]="{'menuHead': menuItem.type == 'head'}">
+    <span>{{menuItem.label}}</span>
+  </div>
+</mat-list-item>
+<mat-expansion-panel *ngIf="menuItem.type == 'parent' && menuItem.child && menuItem.child.length > 0">
   <mat-expansion-panel-header>
     <div [ngClass]="{'menuParent': menuItem.type=='parent'}">{{menuItem.label}}</div>
   </mat-expansion-panel-header>
-  <menuitem *ngFor="let menuitem of menuItem.child" [menuItem]="menuitem"></menuitem>
+  <mat-list>
+    <menuitem *ngFor="let menuitem of menuItem.child" [menuItem]="menuitem"></menuitem>
+  </mat-list>
 </mat-expansion-panel>
-<a [ngClass]="{'menuLink': menuItem.type =='link'}" (click)="goto(menuItem.link)" *ngIf="!menuItem.child || menuItem.child.length == 0">{{menuItem.label}}</a>
+<mat-list-item *ngIf="menuItem.type =='link'">
+  <a [ngClass]="{'menuLink': menuItem.type == 'link'}" (click)="goto(menuItem.link)">{{menuItem.label}}</a>
+</mat-list-item>

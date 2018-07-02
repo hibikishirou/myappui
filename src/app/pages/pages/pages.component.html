@@ -3,7 +3,9 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <menuitem *ngFor="let menu of menus" [menuItem]="menu"></menuitem>
+      <mat-list role="list">
+        <menuitem *ngFor="let menu of menus" [menuItem]="menu"></menuitem>
+      </mat-list>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

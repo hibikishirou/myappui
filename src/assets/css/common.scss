@@ -1,0 +1,22 @@
+.sidenav-container {
+    height: 100%;
+    .sidenav {
+        width: 240px;
+        box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+        .mat-expansion-panel {
+            box-shadow: none;
+            .mat-expansion-panel-header {
+                padding-left: 16px;
+            }
+            .mat-list-item-content {
+                padding-left: 16px;
+            }
+            .mat-expansion-panel-body {
+                padding: 0px;
+            }
+        }
+        .menuHead {
+            
+        }
+    }
+}
